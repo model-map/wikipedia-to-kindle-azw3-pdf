@@ -4,12 +4,14 @@ A bash script to send wikipedia articles to kindle as EPUB. Also downloads a pdf
 
 # Usage
 
-(Note: The following guide follows Gmail configuration. If you're using another email provider, please lookup their smtp configuration)<br><br>
-Before we can begin executing the script we need to make a few changes on our end.
+<sup>(Note: If you only want to download wikipedia articles as pdf and don't care about sending them to your kindle, skip step 1,2,3,4 and go directly to step 5.)</sup><br><br>
+Before we can begin executing the script we need to make a few changes on our end.<br>
 
 1. <b>Get [Google app password](https://support.google.com/accounts/answer/185833?hl=en)</b><br>
    This is required for Google to allow your app to send mail via its smtp server.<br>
    Since we're sending mail to your kindle, please make sure the email address is in kindle's approved email list.
+
+   <sup>(Note: The following guide follows Gmail configuration. If you're using another email provider, please lookup their smtp configuration)<br><br></sup>
 
 2. <b>Open '/etc/ssmtp/ssmtp.conf' and add the following entry:</b>
    <br>
@@ -23,6 +25,8 @@ mailhub=smtp.gmail.com:587
 AuthUser=username@gmail.com
 AuthPass=password
 ```
+
+Replace AuthUser and Authpass with your kindle-approved gmail and app-password respectively.
 
 3. <b>Installing ssmtp and mpack</b>
    <br>On ubuntu:
@@ -53,6 +57,9 @@ sudo apt-get install mpack
 
       <br>
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>
+
+5.  <b>Optionally if you only want to download wikipedia articles as pdf</b> without wanting to send it to kindle you could set<br> `alias [alias]='function _wikipdf() { wget "en.wikipedia.org/api/rest_v1/page/pdf/$1" && mv ./$1 ./$1.pdf; }; _wikipdf'` to your ~/.bashrc.<br>
+    You don't need to follow
 
 # Contribution
 
