@@ -1,6 +1,6 @@
-# Wikipedia-to-kindle--pdf
+# Wikipedia-to-kindle-azw3-pdf
 
-A bash script to send wikipedia articles to kindle as . Also downloads the pdf to your current directory.
+A bash script to send wikipedia articles to kindle as azw3. Also downloads the pdf to your current directory.
 
 # Setup
 
