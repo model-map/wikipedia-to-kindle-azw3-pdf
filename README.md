@@ -60,7 +60,6 @@ sudo apt-get install mpack
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>
 
 5.  <b>Optionally if you only want to download wikipedia articles as pdf</b> without wanting to send it to kindle you could set<br> `alias [alias]='function _wikipdf() { wget "en.wikipedia.org/api/rest_v1/page/pdf/$1" && mv ./$1 ./$1.pdf; }; _wikipdf'` to your ~/.bashrc.<br>
-    You don't need to follow
 
 # Contribution
 
