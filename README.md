@@ -47,6 +47,7 @@ sudo apt-get install mpack
       <br>
 
       - Download `wikipedia-to-epub.sh` file from the github repo
+      - `nano ./wikipedia-to-epub.sh` and change [mail]@kindle.com to your kindle email. <br><sup>(without the square brackets)</sup>
       - `chmod +x ./wikipedia-to-epub.sh`
       - use by executing `./wikipedia-to-epub.sh [article-name]` for example `./wikipedia-to-epub.sh computer_science`
 
