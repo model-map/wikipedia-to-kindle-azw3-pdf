@@ -70,6 +70,8 @@ Depending on the execution method chosen (either 4.1 or 4.2 from above) the arti
 or<br>
 `[alias] article1 article2 article3`<br><br>
 So, for example: `./wikipedia-to-kindle.sh computer_science algorithm linux` or `[alias] computer_science algorithm linux` will download pdfs of computer_science, algorithm and linux articles from wikipedia in your current directory and send a copy to your kindle in azw3 format.
+<br><br>
+Note: There's no max-limit on the number of articles you can input in the command. Just needs at least one.
 
 # Contribution
 
