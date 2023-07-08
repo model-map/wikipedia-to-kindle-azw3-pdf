@@ -65,3 +65,5 @@ sudo apt-get install mpack
 
 The script has only been tested on Ubuntu 22.04LTS so far (since that is the one I have). <br>
 If you'd like, you can contribute by adding instructions for other distros and even other operating systems! (Windows and Mac)
+
+Additionally, You are also encouraged to add support for other e-readers.
