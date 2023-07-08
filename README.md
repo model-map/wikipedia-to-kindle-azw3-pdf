@@ -1,4 +1,4 @@
-# Wikipedia-to-kindle-epub-pdf
+# Wikipedia-to-kindle-azw3-pdf
 
 A bash script to send wikipedia articles to kindle as AZW3. Also downloads the pdf to your current directory.
 
