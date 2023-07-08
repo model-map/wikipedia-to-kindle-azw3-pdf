@@ -66,10 +66,10 @@ sudo apt-get install mpack
 # Usage
 
 Depending on the execution method chosen (either 4.1 or 4.2 from above) the articles can be sent by using the command<br>
-`./wikipedia-to-kindle.sh computer_science algorithm linux` <br>
+`./wikipedia-to-kindle.sh article1 article2 article3` <br>
 or<br>
-`[alias] computer_science algorithm linux`<br>
-This will download the computer_science, algorithm and linux articles from wikipedia, download pdf in your current directory and send a copy to your kindle in format.
+`[alias] article1 article2 article3`<br><br>
+So, for example: `./wikipedia-to-kindle.sh computer_science algorithm linux` or `[alias] computer_science algorithm linux` will download pdfs of computer_science, algorithm and linux articles from wikipedia in your current directory and send a copy to your kindle in azw3 format.
 
 # Contribution
 
