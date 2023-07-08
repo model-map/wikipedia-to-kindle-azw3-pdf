@@ -56,7 +56,7 @@ sudo apt-get install mpack
     - <b>Setting alias in ~/.bashrc</b>
 
       - `nano ~/.bashrc`
-      - Add `alias [alias]='function _wikipdf() { local words=($@); for word in "${words[@]}"; do wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@kindle.com; done; }; _wikipdf'` <br>Replace [alias] and mail with your kindle email.
+      - Add `alias [alias]='function _wikipdf() { local words=($@); for word in "${words[@]}"; do wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@kindle.com; done; }; _wikipdf'` <br>Replace [alias] and mail with an alias and your kindle email respectively.
 
       <br>
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>
