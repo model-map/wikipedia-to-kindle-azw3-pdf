@@ -65,7 +65,7 @@ sudo apt-get install mpack
 
 # Usage
 
-Depending on the execution method chosen (either 4.1 or 4.2 from above) the articles can be sent by using the command
+Depending on the execution method chosen (either 4.1 or 4.2 from above) the articles can be sent by using the command<br>
 `./wikipedia-to-kindle.sh computer_science algorithm linux` <br>
 or<br>
 `[alias] computer_science algorithm linux`<br>
