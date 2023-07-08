@@ -47,14 +47,16 @@ sudo apt-get install mpack
       <br>
 
       - Download `wikipedia-to-epub.sh` file from the github repo
-      - `nano ./wikipedia-to-epub.sh` and change [mail]@kindle.com to your kindle email. <br><sup>(without the square brackets)</sup>
+      - `nano ./wikipedia-to-epub.sh` and change mail@kindle.com to your kindle email.
       - `chmod +x ./wikipedia-to-epub.sh`
       - use by executing `./wikipedia-to-epub.sh [article-name]` for example `./wikipedia-to-epub.sh computer_science`
+      - It is also possible to download multiple files. Just mention article names in succession. For example<br>
+        `./wikipedia-to-epub.sh computer_science algorithm life death` will download wikipedia articles for computer_science, algorithm, life, death and send them to your kindle device.
 
     - <b>Setting alias in ~/.bashrc</b>
 
       - `nano ~/.bashrc`
-      - Add `alias [alias]='function _wikipdf() { wget "en.wikipedia.org/api/rest_v1/page/pdf/$1" && mv ./$1 ./$1.pdf && mpack -s "convert" -a ./$1.pdf [mail]@kindle.com; }; _wikipdf'` <br>Replace [alias] with a suitable alias and [mail] with your kindle email.
+      - Add `alias wikiepub='function _wikipdf() { local words=($@); for word in "${words[@]}"; do wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@kindle.com; done; }; _wikipdf'` <br>Replace mail with your kindle email.
 
       <br>
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>

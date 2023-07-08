@@ -1,13 +1,15 @@
 #!/bin/bash
 
 function _wikipdf() {
-    wget "en.wikipedia.org/api/rest_v1/page/pdf/$1" && mv ./$1 ./$1.pdf && mpack -s "convert" -a ./$1.pdf [mail]@kindle.com
+    local words=($@)
+    for word in "${words[@]}"; do
+        wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@gmail.com
+    done
 }
 
-# Check if an argument is provided
-if [ $# -eq 1 ]; then
-    _wikipdf "$1"
+# Check if arguments are provided
+if [ $# -ge 1 ]; then
+    _wikipdf "$@"
 else
-    echo "Please provide a value as an argument."
+    echo "Please provide at least one value as an argument."
 fi
-
