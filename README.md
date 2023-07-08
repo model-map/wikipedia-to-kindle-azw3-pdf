@@ -1,6 +1,6 @@
 # Wikipedia-to-kindle-epub-pdf
 
-A bash script to send wikipedia articles to kindle as EPUB. Also downloads the pdf to your current directory.
+A bash script to send wikipedia articles to kindle as AZW3. Also downloads the pdf to your current directory.
 
 # Usage
 
@@ -56,7 +56,7 @@ sudo apt-get install mpack
     - <b>Setting alias in ~/.bashrc</b>
 
       - `nano ~/.bashrc`
-      - Add `alias wikiepub='function _wikipdf() { local words=($@); for word in "${words[@]}"; do wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@kindle.com; done; }; _wikipdf'` <br>Replace mail with your kindle email.
+      - Add `alias [alias]='function _wikipdf() { local words=($@); for word in "${words[@]}"; do wget "en.wikipedia.org/api/rest_v1/page/pdf/$word" && mv "./$word" "./$word.pdf" && mpack -s "convert" -a "./$word.pdf" mail@kindle.com; done; }; _wikipdf'` <br>Replace [alias] and mail with your kindle email.
 
       <br>
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>
