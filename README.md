@@ -1,8 +1,8 @@
-# Wikipedia-to-kindle-azw3-pdf
+# Wikipedia-to-kindle--pdf
 
-A bash script to send wikipedia articles to kindle as AZW3. Also downloads the pdf to your current directory.
+A bash script to send wikipedia articles to kindle as . Also downloads the pdf to your current directory.
 
-# Usage
+# Setup
 
 <sup>(Note: If you only want to download wikipedia articles as pdf and don't care about sending them to your kindle, skip step 1,2,3,4 and go directly to step 5.)</sup><br><br>
 Before we can begin executing the script we need to make a few changes on our end.<br>
@@ -46,12 +46,12 @@ sudo apt-get install mpack
     - <b>Executing bash script</b>
       <br>
 
-      - Download `wikipedia-to-epub.sh` file from the github repo
-      - `nano ./wikipedia-to-epub.sh` and change mail@kindle.com to your kindle email.
-      - `chmod +x ./wikipedia-to-epub.sh`
-      - use by executing `./wikipedia-to-epub.sh [article-name]` for example `./wikipedia-to-epub.sh computer_science`
+      - Download `wikipedia-to-azw3.sh` file from the github repo
+      - `nano ./wikipedia-to-azw3.sh` and change mail@kindle.com to your kindle email.
+      - `chmod +x ./wikipedia-to-azw3.sh`
+      - use by executing `./wikipedia-to-azw3.sh [article-name]` for example `./wikipedia-to-azw3.sh computer_science`
       - It is also possible to download multiple files. Just mention article names in succession. For example<br>
-        `./wikipedia-to-epub.sh computer_science algorithm life death` will download wikipedia articles for computer_science, algorithm, life, death and send them to your kindle device.
+        `./wikipedia-to-azw3.sh computer_science algorithm life death` will download wikipedia articles for computer_science, algorithm, life, death and send them to your kindle device.
 
     - <b>Setting alias in ~/.bashrc</b>
 
@@ -62,6 +62,14 @@ sudo apt-get install mpack
          (I personally recommend 4.2. since it allows the command to be executed from anywhere as opposed to the script method.)<br><br>
 
 5.  <b>Optionally if you only want to download wikipedia articles as pdf</b> without wanting to send it to kindle you could set<br> `alias [alias]='function _wikipdf() { wget "en.wikipedia.org/api/rest_v1/page/pdf/$1" && mv ./$1 ./$1.pdf; }; _wikipdf'` to your ~/.bashrc.<br>
+
+# Usage
+
+Depending on the execution method chosen (either 4.1 or 4.2 from above) the articles can be sent by using the command
+`./wikipedia-to-kindle.sh computer_science algorithm linux` <br>
+or<br>
+`[alias] computer_science algorithm linux`<br>
+This will download the computer_science, algorithm and linux articles from wikipedia, download pdf in your current directory and send a copy to your kindle in format.
 
 # Contribution
 
